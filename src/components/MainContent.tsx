@@ -1,17 +1,11 @@
-import React from 'react';
-import Title from './Title'
-import Button from './Button'
-import text from '../text.json';
+// import InfoBlock from './InfoBlock';
+import GetStartedBlock from './GetStartedBlock';
 
 function MainContent() {
     return (
         <div className='content'>
-            <Title />
-            <img className='qr' src='/qr.png' alt='QR code' />
-            <div className='app_buttons'>
-                <Button text={text.appStoreButtonText} path='/appStore.png' link='https://www.apple.com/' />
-                <Button text={text.googlePlayButtonText} path='/googlePlay.png' link='https://www.google.com/' />
-            </div>
+            <GetStartedBlock />
+            {/* <InfoBlock header={text.infoBlock1.title} description={text.infoBlock1.subTitle} content={text.infoBlock1.content} /> */}
         </div>
     );
 }

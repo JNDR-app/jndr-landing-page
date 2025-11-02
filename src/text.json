@@ -1,12 +1,24 @@
 {
-    "headerTitle": "Jndr",
-    "supportButton": "support@jndr.com",
-    "eulaButton": "EULA",
-    "ppButton": "Privacy Policy",
-    "title": "The journey to your dream job begins here.",
-    "subTitle": "Unlock your career potential with AI-generated resumes and tailored job matches.",
-    "appStoreButtonText": "App Store",
-    "googlePlayButtonText": "Google Play",
-    "EULA_title": "End-User License Agreement (EULA) for JNDR Application",
-    "privacy_policy_title": "Privacy Policy for Project JNDR (MVP Stage)"
+    "companyName": "Jndr",
+
+    "WhatIsJndr_Header": "What is Jinder (Jndr)?",
+    "WhatIsJndr_Description": "There’s no magic formula to land any job - your real skills matter. But at Jndr, we do everything we can to make sure your resume gets seen by the right people.\n\nJndr is built to speed up your job search and boost your chances of getting to the next interview stage. \n\n Good luck!",
+    
+    "HowItWorks_Header": "How does it work?",
+    "HowItWorks_Description_Step1": "1️⃣ Upload your existing resume and fill out a short, simple form with a few preferences",
+    "HowItWorks_Description_Step2": "2️⃣ We analyze your profile and show you a personalized feed of job openings that match your skills",
+    "HowItWorks_Description_Step3": "3️⃣ Our AI fine-tunes your resume to better align with each job - not by making things up, but by highlighting your strengths that matter most to ATS systems and hiring teams",
+    "HowItWorks_Description_Step4 ": "4️⃣With your tailored resume ready, you apply and wait for a response from the employer",
+
+    "WhyJndr_Header": "Why Jndr?",
+    "WhyJndr_Description": "⏱️ Stop wasting time on endless scrolling. We curate only relevant jobs with clear, concise descriptions.\n\n📄 You need a unique resume for each role - that’s the game. But now, you don’t need a computer to do it. Our AI adapts your resume right from your device.\n\n⭐️ Want to keep track of where you applied and which resume you used? Maybe you’re not ready to apply yet and want to prepare first? Just save any job to Favourites - it’ll be there when you’re ready.",
+
+    "ReferralProgram_Header": "Referral Program",
+    "ReferralProgram_Description": "Coming soon..",
+
+    "GetStarted_Button": "Get Started in Web",
+    "NoDownloadRequired": "No download required. Access instantly from any deviced",
+    "ScanQR": "Scan to open on the phone",
+
+    "support_Button": "info@jndr.com"
 }
