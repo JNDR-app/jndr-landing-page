@@ -2,7 +2,7 @@ import text from '../text.json';
 
 function Header() {
     return (
-        <div className='header'>{text.companyName}</div>
+        <h2 className='header'>{text.companyName}</h2>
     );
 }
 

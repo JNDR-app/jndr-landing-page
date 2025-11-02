@@ -1,15 +1,16 @@
+import React, { ReactNode } from 'react';
+
 interface InfoBlockProps {
     header: string;
     description: string;
-    content: string;
+    content: ReactNode; // now can be a component/object render
 }
 
 function InfoBlock({ header, description, content }: InfoBlockProps) {
     return (
-        <div>
-            <h2>{header}</h2>
-            <p>{description}</p>
-            <p>{content}</p>
+        <div className='info-block'>
+            <h2 className='info-block__header'>{header}</h2>
+            <div className='info-block__content'>{content}</div>
         </div>
     );
 }

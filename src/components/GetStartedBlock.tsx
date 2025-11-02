@@ -1,4 +1,3 @@
-import React from 'react';
 import text from '../text.json';
 import Button from './Button';
 
