@@ -1,10 +1,10 @@
 // Type for section descriptions: array of { id: string, description: string }
-interface InfoBlockListProps {
+interface InfoListBlockProps {
     header: string;
     descriptions: Array<{ id: string; description: string }>;
 }
 
-function InfoBlockList({ header, descriptions }: InfoBlockListProps) {
+function InfoListBlock({ header, descriptions }: InfoListBlockProps) {
     const steps = descriptions.map((desc) => ({
         id: desc.id,
         text: desc.description
@@ -31,4 +31,4 @@ function InfoBlockList({ header, descriptions }: InfoBlockListProps) {
     );
 }
 
-export default InfoBlockList;
+export default InfoListBlock;
