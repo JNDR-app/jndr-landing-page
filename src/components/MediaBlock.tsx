@@ -6,7 +6,6 @@ function MediaBlock() {
         <div className='media-block'>
             <img src='/video.png' alt='Media' className='media-background' />
             <div className='media-content'>
-                <h2>{text.companyName}</h2>
                 <Button text={text.GetStarted_Button} link='https://www.google.com/' />
             </div>
         </div>

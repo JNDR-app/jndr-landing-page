@@ -2,7 +2,7 @@
 
 $padding_content: 15%;
 $border_color: #E4E4E7;
-$border_line: 2.5px solid $border_color;
+$border_line: 2.2px solid $border_color;
 $header_footer_height: 7.5vh;
 $color_dark_grey: #484848;
 $color_light_grey: #95959C;
@@ -15,6 +15,7 @@ $block_gap: 6.25px;
 $header_indent: 87.5px;
 $block_border_radius: 18.75px;
 $block_shadow: 0 2.5px 5px rgba(0, 0, 0, 0.1);
+$button_shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 $description_padding: 31.25px;
 $description_font_size: 20px;
 
@@ -51,11 +52,17 @@ body {
 
     display: flex;
     align-items: center;
+    gap: 10px;
 
     color: $color_dark_grey;
     font-weight: 700;
     font-size: 30px;
     padding-left: calc($padding_content + $header_indent);
+}
+
+.header-logo {
+    height: 1em;
+    width: auto;
 }
 
 .header::after {
@@ -138,6 +145,9 @@ body {
 
 .media-content {
     position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -185,7 +195,7 @@ body {
     justify-content: center;
     font-size: 17.5px;
     font-weight: 700;
-    box-shadow: $block_shadow;
+    box-shadow: $button_shadow;
 }
 
 .button:hover {
