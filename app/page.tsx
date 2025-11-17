@@ -26,8 +26,6 @@ export default function LandingPage() {
     {
       number: "04",
       title: "With your tailored resume ready, you apply and wait for a response from the employer.",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/success-fZ4JNgrR8m5XyMsVyLdsXqhQ0gUsHg.png",
-      imageAlt: "Success screen showing resume submitted",
       reverse: true,
     },
   ];
@@ -101,7 +99,13 @@ export default function LandingPage() {
               >
                 <div className="md:w-[500px] space-y-3">
                   <div className="inline-flex items-center gap-3">
-                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-lg font-bold text-primary-foreground shadow-lg">
+                    <span
+                      className={`flex h-12 w-12 items-center justify-center rounded-xl text-lg font-bold shadow-lg ${
+                        feature.number === "04"
+                          ? "bg-[#22C55E] text-white"
+                          : "bg-primary text-primary-foreground"
+                      }`}
+                    >
                       {feature.number}
                     </span>
                   </div>
@@ -109,24 +113,26 @@ export default function LandingPage() {
                     {feature.title}
                   </h3>
                 </div>
-                <div className="md:w-[260px] flex justify-center">
-                  <div className="relative w-full max-w-[210px]">
-                    <div className="relative overflow-hidden rounded-[2.7rem] border-8 border-foreground/10 bg-background shadow-xl">
-                      <Image
-                        src={feature.image || "/placeholder.svg"}
-                        alt={feature.imageAlt}
-                        width={210}
-                        height={420}
-                        className="h-auto w-full"
-                        priority={index < 2}
+                {feature.image && (
+                  <div className="md:w-[260px] flex justify-center">
+                    <div className="relative w-full max-w-[210px]">
+                      <div className="relative overflow-hidden rounded-[2.7rem] border-8 border-foreground/10 bg-background shadow-xl">
+                        <Image
+                          src={feature.image}
+                          alt={feature.imageAlt || ""}
+                          width={210}
+                          height={420}
+                          className="h-auto w-full"
+                          priority={index < 2}
+                        />
+                      </div>
+                      <div
+                        className="absolute -inset-3 -z-10 rounded-[3.5rem] bg-primary/5 blur-2xl"
+                        aria-hidden="true"
                       />
                     </div>
-                    <div
-                      className="absolute -inset-3 -z-10 rounded-[3.5rem] bg-primary/5 blur-2xl"
-                      aria-hidden="true"
-                    />
                   </div>
-                </div>
+                )}
               </div>
             ))}
           </div>
@@ -184,9 +190,11 @@ export default function LandingPage() {
             <button
               className="mt-6 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-lg transition-all hover:scale-105 hover:shadow-xl cursor-pointer"
             >
-              Get Started in Web
+              Get Started
             </button>
-            <div className="mt-6 flex flex-col items-center gap-2">
+            {/* Added 'Or' text (desktop only) */}
+            <p className="mt-4 hidden md:block text-sm text-muted-foreground">Or</p>
+            <div className="mt-6 hidden md:flex flex-col items-center gap-2">
               <div className="rounded-2xl border-4 border-primary/20 bg-white p-2">
                 <Image
                   src="/placeholder.svg?height=160&width=160"
