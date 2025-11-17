@@ -57,7 +57,7 @@ export default function LandingPage() {
 
       <section id="what" className="container mx-auto px-4 py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-balance text-center text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="text-balance text-center text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl">
             What is Jinder (Jndr)?
           </h2>
           <div className="mx-auto mt-8 max-w-3xl rounded-2xl border-border bg-card p-8 shadow-sm border-2 ml-auto">
