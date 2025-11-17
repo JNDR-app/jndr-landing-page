@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 
 export default function LandingPage() {
@@ -30,6 +32,14 @@ export default function LandingPage() {
     },
   ];
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.querySelector(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-background via-muted/20 to-background">
       {/* FIXED HEADER */}
@@ -41,17 +51,19 @@ export default function LandingPage() {
           </div>
           <a
             href="#start"
+            onClick={(e) => scrollToSection(e, '#start')}
             className="md:hidden h-9 inline-flex items-center justify-center rounded-full bg-primary px-4 text-sm font-semibold text-primary-foreground shadow-md transition-all hover:scale-105 hover:shadow-lg"
           >
             Get Started
           </a>
           <nav className="hidden md:flex items-center gap-4">
-            <a href="#what" className="text-sm text-muted-foreground hover:text-foreground">What</a>
-            <a href="#how" className="text-sm text-muted-foreground hover:text-foreground">How</a>
-            <a href="#why" className="text-sm text-muted-foreground hover:text-foreground">Why</a>
-            <a href="#referral" className="text-sm text-muted-foreground hover:text-foreground">Referral</a>
+            <a href="#what" onClick={(e) => scrollToSection(e, '#what')} className="text-sm text-muted-foreground hover:text-foreground">What</a>
+            <a href="#how" onClick={(e) => scrollToSection(e, '#how')} className="text-sm text-muted-foreground hover:text-foreground">How</a>
+            <a href="#why" onClick={(e) => scrollToSection(e, '#why')} className="text-sm text-muted-foreground hover:text-foreground">Why</a>
+            <a href="#referral" onClick={(e) => scrollToSection(e, '#referral')} className="text-sm text-muted-foreground hover:text-foreground">Referral</a>
             <a
               href="#start"
+              onClick={(e) => scrollToSection(e, '#start')}
               className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground shadow-md transition-all hover:scale-105 hover:shadow-lg"
             >
               Get Started
