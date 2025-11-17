@@ -1,4 +1,6 @@
-## Landing page for Jndr
+## Description
+
+Landing page for Jndr
 
 ## Prerequisites
 
